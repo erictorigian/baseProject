@@ -8,5 +8,7 @@ target 'baseProject' do
   # Pods for baseProject
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
 
 end
