@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07736AD92301D00600EA92C5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07736AD82301D00600EA92C5 /* Utilities.swift */; };
 		07F909FE2300976D00AFEB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F909FD2300976D00AFEB04 /* AppDelegate.swift */; };
 		07F90A002300976D00AFEB04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F909FF2300976D00AFEB04 /* SceneDelegate.swift */; };
 		07F90A022300976D00AFEB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A012300976D00AFEB04 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07736AD82301D00600EA92C5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		07F909FA2300976D00AFEB04 /* baseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F909FD2300976D00AFEB04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07F909FF2300976D00AFEB04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +66,10 @@
 		07F909FC2300976D00AFEB04 /* baseProject */ = {
 			isa = PBXGroup;
 			children = (
-				07F90A14230099C500AFEB04 /* Helpers */,
 				07F90A13230099B600AFEB04 /* Models */,
 				07F909FD2300976D00AFEB04 /* AppDelegate.swift */,
 				07F909FF2300976D00AFEB04 /* SceneDelegate.swift */,
+				07F90A14230099C500AFEB04 /* Helpers */,
 				07F90A12230099A300AFEB04 /* ViewControllers */,
 				07F90A032300976E00AFEB04 /* Main.storyboard */,
 				07F90A062300977000AFEB04 /* Assets.xcassets */,
@@ -98,6 +100,7 @@
 		07F90A14230099C500AFEB04 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				07736AD82301D00600EA92C5 /* Utilities.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				07F90A022300976D00AFEB04 /* ViewController.swift in Sources */,
 				07F909FE2300976D00AFEB04 /* AppDelegate.swift in Sources */,
+				07736AD92301D00600EA92C5 /* Utilities.swift in Sources */,
 				07F90A162301C58F00AFEB04 /* SignUpViewController.swift in Sources */,
 				07F90A182301C5A200AFEB04 /* LoginViewController.swift in Sources */,
 				07F90A002300976D00AFEB04 /* SceneDelegate.swift in Sources */,
