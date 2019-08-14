@@ -41,7 +41,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNZ-gv-73p" secondAttribute="trailing" constant="40" id="dGu-Rr-ZlX"/>
                             <constraint firstItem="ZNZ-gv-73p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="reR-h2-OoN"/>
@@ -221,10 +221,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aXt-s1-D2N"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C8v-hh-a4g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IB3-JC-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="110"/>
+            <point key="canvasLocation" x="3544.9275362318845" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j3Y-Ha-fV5">
@@ -242,6 +243,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGv-nB-8cG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pYu-4P-a5z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Om-hs-e1I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RSd-Iz-hvw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cs8-ZM-Tfe" kind="relationship" relationship="rootViewController" id="iRw-M7-Vys"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmL-Tb-V9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634.7826086956525" y="109.82142857142857"/>
         </scene>
     </scenes>
 </document>
