@@ -12,6 +12,8 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    var window: UIWindow?
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -53,7 +55,7 @@ class LoginViewController: UIViewController {
         } else {
             //sign in the user
             let email = self.emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-                       let password = self.passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = self.passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
                 if err != nil {
                     self.showError(err!.localizedDescription)
@@ -74,10 +76,12 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
+        
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
+        
     }
     
     
