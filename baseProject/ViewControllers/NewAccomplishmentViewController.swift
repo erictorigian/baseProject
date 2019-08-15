@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class NewAccomplishmentViewController: UIViewController {
+    
+    var accomplishment = Accomplishment()
 
+    @IBOutlet weak var accomplishmentDetailsTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +22,19 @@ class NewAccomplishmentViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+   
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        if let accomplishmentDetail = accomplishmentDetailsTextField.text {
+            
+            self.accomplishment.detail = accomplishmentDetail
+            
+            let db = Firestore.firestore()
+            
+            db.collection("accomplishments").addDocument(data: ["accomplishment": accomplishmentDetail])
+            
+            navigationController?.popViewController(animated: true)
+        }
     }
-    */
-
 }

@@ -7,16 +7,35 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class HomeTableViewController: UITableViewController {
 
-    var accomplishments = [Accomplishment]()
+    var accomplishments = [String]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.accomplishments.append(Accomplishment(detail: "wrote a custom class"))
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+
+        let db = Firestore.firestore()
+        
+        db.collection("accomplishments").getDocuments() { (snapshot, err) in
+            
+            if let err = err {
+                print("error getting documents: \(err)")
+            } else {
+                for document in snapshot!.documents {
+                    let accomplishment = document.data()
+                    self.accomplishments.append(accomplishment["accomplishment"] as! String)
+                    print(accomplishment)
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+                
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,7 +60,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = accomplishments[indexPath.row].detail
+        cell.textLabel?.text = self.accomplishments[indexPath.row]
         return cell
     }
 

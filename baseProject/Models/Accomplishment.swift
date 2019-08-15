@@ -9,9 +9,6 @@
 import Foundation
 
 class Accomplishment {
-    var detail: String
+    var detail: String  = "Nothing new here"
     
-    init( detail: String) {
-        self.detail = detail
-    }
 }
