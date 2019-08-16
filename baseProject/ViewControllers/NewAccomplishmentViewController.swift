@@ -8,31 +8,37 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class NewAccomplishmentViewController: UIViewController {
     
-    var accomplishment = Accomplishment()
-
+    var accomplishment = [Accomplishment]()
+    let user = Auth.auth().currentUser
+    
     @IBOutlet weak var accomplishmentDetailsTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-   
-
+    
+    
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         if let accomplishmentDetail = accomplishmentDetailsTextField.text {
+            let newDetail = accomplishmentDetail
+            let newUser = "Eric"
             
-            self.accomplishment.detail = accomplishmentDetail
+            let newAccomplishment = Accomplishment(detail: newDetail, user: newUser)
             
             let db = Firestore.firestore()
             
-            db.collection("accomplishments").addDocument(data: ["accomplishment": accomplishmentDetail])
+            db.collection("accomplishments").addDocument(data: [
+                "accomplishment": newAccomplishment.detail,
+                "user": newAccomplishment.user ])
             
             navigationController?.popViewController(animated: true)
         }
